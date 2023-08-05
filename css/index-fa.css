@@ -5,6 +5,12 @@
 	font-weight: 400;
 	src: url(PatrickHand-Regular.ttf) format('truetype');
 }
+@font-face {
+	font-family: "B Koodak";
+	font-style: normal;
+	font-weight: 400;
+	src: url(BKoodak.ttf) format('truetype');
+}
 
 /* HTML & BODY */
 html, body{
@@ -17,10 +23,9 @@ body{
 	background: #fff;
 	margin:0;
 
-	font-family: "PatrickHand", Helvetica, Arial;
-	font-size: 23px;
+	font-family: "B Koodak", PatrickHand, Arial;
+	font-size: 22px;
 	line-height: 1.5em;
-
 }
 /* fake bold */
 b, strong{
@@ -62,7 +67,7 @@ a:hover{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	user-select: none; 
 }
 #simulations canvas, #slideshow > div{
 	position: absolute;
@@ -71,29 +76,29 @@ a:hover{
 	background-size: 100% 100%;
 }
 #slideshow .next_button{
-	/*display: inline-block;*/
-	margin: 0 auto;
-	position: relative;
-	top: -10px;
-	width: 300px;
+    /*display: inline-block;*/
+    margin: 0 auto;
+    position: relative;
+    top: -10px;
+    width: 300px;
     height: 20px;
     padding: 37px 0 43px 0;
-	background-image: url(../sprites/button_large.png);
-	background-size: 100% auto;
-	text-align: center;
-	line-height: 25px;
+    background-image: url(../sprites/button_large.png);
+    background-size: 100% auto;
+    text-align: center;
+    line-height: 25px;
 }
 #slideshow .next_button:hover{
-	background-position: 0 -100px;
+    background-position: 0 -100px;
 }
 #slideshow .next_button[disabled]{
-	pointer-events: none;
-	opacity: 0.3;
+    pointer-events: none;
+    opacity: 0.3;
 }
 .transitionable{
-	transition: opacity 0.3s ease-in-out,
-			    left 0.3s ease-in-out,
-			    top 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out,
+    left 0.3s ease-in-out,
+    top 0.3s ease-in-out;
 }
 
 #scratch{
@@ -106,24 +111,24 @@ a:hover{
 
 /* Skip */
 #container > #skip{
-
+	
 	display: none;
 
 	position: absolute;
-	right:10px;
+	left:10px;
 	bottom:10px;
 	width: auto;
 	height: 25px;
 	font-size: 25px;
 	line-height: 25px;
 	color: #aaa;
-	text-align: right;
+	text-align: left;
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
-
+	user-select: none; 
+	
 }
 #container > #skip:hover{
 	color: #ccc;
@@ -137,8 +142,8 @@ a:hover{
     transform: scale(1.2);
 }
 
-/* Right & Down Arrows */
-.rarr, .darr{
+/* Right & Left & Down Arrows */
+.rarr, .larr, .darr{
 	display: inline-block;
 	width: 1em;
 	height: 1em;
@@ -149,6 +154,9 @@ a:hover{
 }
 .darr{
 	transform: rotate(90deg);
+}
+.larr{
+	transform: rotate(180deg);
 }
 
 /* Sim UI */
@@ -187,6 +195,7 @@ a:hover{
 /* Sandbox UI */
 .sandbox_ui{
 	width: 270px;
+    left: 0px;
 }
 .sandbox_ui input[type="range"]{
 	width: 100%;
@@ -282,7 +291,8 @@ a:hover{
     right: 0;
     width: 40px;
     height: 40px;
-    font-size: 50px;
+    font-size: 40px;
+	font-family: PatrickHand;
     text-align: center;
     line-height: 25px;
 }
@@ -292,7 +302,6 @@ a:hover{
 }
 #modal_content{
 	margin:1.5em;
-	letter-spacing: 1px;
 }
 
 /* NAVIGATION */
@@ -306,7 +315,7 @@ a:hover{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	user-select: none; 
 }
 #sound{
 	position: absolute;
@@ -321,7 +330,7 @@ a:hover{
 }
 #sound_icon{
 	background: url(../sprites/ui/sound.png);
-	background-size: auto 100%;
+	background-size: auto 100%; 
 	width: 60px; height: 60px;
 	position: absolute;
 }
@@ -332,7 +341,6 @@ a:hover{
     display: block;
     line-height: 28px;
     display: none;
-    letter-spacing: 2px;
 }
 #sound[mute=no] > #sound_icon{
 	/*background: rgba(255,255,255,0.5);*/
@@ -360,7 +368,7 @@ a:hover{
 	width: 50px;
 	height: 60px;
 	background: url(../sprites/ui/sharing.png);
-	background-size: auto 100%;
+	background-size: auto 100%; 
 }
 #sharing #fb{
 	background-position: 0px 0px;
@@ -378,15 +386,14 @@ a:hover{
 	display: none;
 }
 #translations{
-	position: absolute;
+    position: absolute;
     top: 12px;
-    left: calc(50% - 450px);
-    width: 900px;
+    left: calc(50% - 350px);
+    width: 700px;
     text-align: center;
     color: #fff;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.5px;
+    font-size: 13px;
+    line-height: 15px;
 }
 #navigation{
 
@@ -439,23 +446,23 @@ a:hover{
 	margin: 0 8px;
 }
 #navigation > span#nav_bubble{
-
+	
 	transition: opacity 0.2s ease-in-out,
 			    left 0.2s ease-in-out,
 			    top 0.2s ease-in-out;
 
 	display: none;
 	opacity: 0;
-
+	
 	position: absolute;
 	top:-80px;
 	left:0;
-
+	
 	background: rgba(0,0,0,0.8);
 	color: #fff;
 	text-align: center;
 	border-radius: 20px;
-
+    
     width: 220px;
     padding: 6px 0;
 
@@ -520,10 +527,10 @@ words, bonus, reference{
 bon{
     margin: 0.75em auto;
     display: block;
-
+    
     background: #ccc;
     color: #444;
-    text-align: left;
+    text-align: right;
 
     width: 300px;
     height: 56px;
@@ -531,7 +538,7 @@ bon{
     border-bottom: 4px solid rgba(0,0,0,0.25);
     border-radius: 5px;
 
-    line-height: 1.1em;
+    line-height: 1.3em;
     background-size: 400px auto;
 
     position: relative;
@@ -542,7 +549,7 @@ bon:before{
 	content: '';
 	display: block;
     position: absolute;
-
+    
     left: 25px;
     top: 14px;
     width: 35px;
@@ -564,6 +571,7 @@ ref{
 }
 ref:before{
 	content: '*';
+	font-family: PatrickHand;
     background: #ddd;
     color: #444;
     padding: 3px;
